@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Soldados extends Model
 {
     use HasFactory;
+    protected $fillable = ['nomcompleto', 'nom','am','ap','foto'];
+    protected $primaryKey = 'idsol';
 }

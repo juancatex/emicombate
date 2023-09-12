@@ -21,14 +21,15 @@ const props = defineProps({
                 <div class="pt-6 text-white text-4xl text-center font-bold">Entrenamiento de Combate </div> 
                 <div class="pt-2 pb-6 text-white text-4xl text-center">C.Q.B.</div> 
                 <div class="w-full flex flex-col sm:justify-center items-center" style="padding: 0% 20%;"> 
-                    <button
+                    <Link :href="route('soldado')" method="get" as="button" type="button"
                         class="mt-3 block w-full bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-2 border-blue-600 hover:border-blue-500 rounded transition duration-150 ease-in-out">
                         Nuevo registro 
-                    </button>
-                    <button v-if="rol==1"
+                    </Link>
+  
+                    <Link v-if="rol==1" :href="route('combate')" method="get" as="button" type="button"
                         class="mt-3 block w-full bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-2 border-blue-600 hover:border-blue-500 rounded transition duration-150 ease-in-out">
                         Registro del combatiente 
-                    </button>
+                    </Link>
                     <button
                         class="mt-3 block w-full bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-2 border-blue-600 hover:border-blue-500 rounded transition duration-150 ease-in-out">
                         Busqueda historica

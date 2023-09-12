@@ -1,5 +1,6 @@
 import './bootstrap';
 import '../css/app.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { createApp, h } from 'vue';
 import { createInertiaApp } from '@inertiajs/vue3';
@@ -21,3 +22,4 @@ createInertiaApp({
         color: '#4B5563',
     },
 });
+import 'bootstrap/dist/js/bootstrap';

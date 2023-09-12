@@ -12,7 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('soldados', function (Blueprint $table) {
-            $table->id();
+            $table->increments('idsol');
+            $table->string('nomcompleto');
+            $table->string('nom');
+            $table->string('ap');
+            $table->string('am');
+            $table->longText('foto'); 
+            $table->boolean('activo')->default(1);
             $table->timestamps();
         });
     }

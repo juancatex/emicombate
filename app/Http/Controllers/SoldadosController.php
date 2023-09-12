@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Soldados;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class SoldadosController extends Controller
 {
@@ -12,7 +13,14 @@ class SoldadosController extends Controller
      */
     public function index()
     {
-        //
+        
+        $soldado= Soldados::where('activo',1)
+        ->orderBy('idsol')
+        ->paginate(5);  
+
+        return Inertia::render('Soldados', [ 
+            'soldados' => $soldado, 
+        ]);
     }
 
     /**
@@ -28,7 +36,15 @@ class SoldadosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([  
+            'nom' => 'required|string|max:255',
+            'ap' => 'required|string|max:255',
+            'am' => 'required|string|max:255',
+            'foto' => 'required|string' 
+        ]);
+        $Soldados = Soldados::create($request->input());   
+        $Soldados->save();
+        return redirect('soldado');
     }
 
     /**
