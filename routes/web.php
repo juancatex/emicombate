@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SoldadosController;
+use App\Http\Controllers\CombateController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -34,6 +35,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/inicio', [ProfileController::class, 'inicio'])->name('inicio');
     Route::get('/soldado', [SoldadosController::class, 'index'])->name('soldado');
     Route::post('/GuardarSoldado', [SoldadosController::class, 'store'])->name('GuardarSoldado');
+
+    Route::get('/combate', [CombateController::class, 'index'])->name('combate');
+    Route::post('/Guardarcombate', [CombateController::class, 'store'])->name('Guardarcombate');
+    Route::get('/reportercombate', [CombateController::class, 'reporte'])->name('reportercombate');
  
 });
 

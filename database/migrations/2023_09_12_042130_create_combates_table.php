@@ -12,8 +12,16 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('combates', function (Blueprint $table) {
-            $table->id();
+            $table->increments('idco');
+            $table->integer('no');
+            $table->integer('idsol')->unsigned(); 
+            $table->integer('municiongas');
+            $table->integer('municionsob');
+            $table->integer('vida');
+            $table->integer('tiempo');
+            $table->boolean('activo')->default(1);
             $table->timestamps();
+            $table->foreign('idsol')->references('idsol')->on('soldados');
         });
     }
 

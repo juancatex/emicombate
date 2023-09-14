@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Combate extends Model
 {
     use HasFactory;
+    protected $fillable = ['no', 'idsol','municiongas','municionsob','vida','tiempo'];
+    protected $primaryKey = 'idco'; 
 }
