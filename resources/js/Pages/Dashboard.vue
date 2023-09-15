@@ -30,10 +30,7 @@ const props = defineProps({
                         class="mt-3 block w-full bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-2 border-blue-600 hover:border-blue-500 rounded transition duration-150 ease-in-out">
                         Registro del combatiente 
                     </Link>
-                    <button
-                        class="mt-3 block w-full bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-2 border-blue-600 hover:border-blue-500 rounded transition duration-150 ease-in-out">
-                        Busqueda historica
-                    </button>
+                   
                     <button
                         class="mt-3 block w-full bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-2 border-blue-600 hover:border-blue-500 rounded transition duration-150 ease-in-out">
                         Manual de Entrenamiento

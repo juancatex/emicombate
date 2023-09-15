@@ -79,7 +79,7 @@ body {
     <main>
     <div class="body_wrapper">
         
-        <h1 style="color: #0c49a5;text-align: center;">Datos de entrenamiento</h1>
+        <h1 style="color: #0c49a5;text-align: center;">Datos de entrenamiento "CQB"</h1>
        
       <br><br>
       <div style="border:1px solid gray;padding:1.5em;">
